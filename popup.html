@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Renamer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>🏷️ Tab Renamer</h2>
+    </header>
+
+    <div class="input-group">
+      <div class="input-row">
+        <input type="text" id="domainInput" placeholder="域名 (如: google.com)">
+        <button id="getCurrentBtn" title="获取当前标签页域名">📍</button>
+      </div>
+      <input type="text" id="titleInput" placeholder="新标题 (如: 工作搜索)">
+      <button id="addBtn" class="primary-btn">添加规则</button>
+    </div>
+
+    <div class="rules-list-container">
+      <h3>已配置规则 (<span id="ruleCount">0</span>)</h3>
+      <ul id="rulesList">
+        <!-- 规则将通过 JS 动态插入 -->
+      </ul>
+      <div id="emptyState" class="empty-state" style="display:none;">
+        暂无规则，快去添加吧！
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
